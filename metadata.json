@@ -1,0 +1,8 @@
+{
+  "name": "Automatic Power Profile on Battery Change",
+  "description": "Automatically switches between Battery Saver when on battery and Power when plugged in",
+  "uuid": "powerProfileSwitcher@jeremybasken.com",
+  "shell-version": [
+    "49"
+  ]
+}
