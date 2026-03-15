@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schemalist>
+  <schema id="org.gnome.shell.extensions.powerProfileSwitcher"
+          path="/org/gnome/shell/extensions/powerProfileSwitcher/">
+    <key name="ac-profile" type="s">
+      <default>'performance'</default>
+      <summary>Profile when on AC power</summary>
+      <description>Power profile to use when plugged into AC power</description>
+    </key>
+    <key name="battery-profile" type="s">
+      <default>'power-saver'</default>
+      <summary>Profile when on battery</summary>
+      <description>Power profile to use when running on battery</description>
+    </key>
+  </schema>
+</schemalist>
