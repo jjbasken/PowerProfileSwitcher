@@ -1,10 +1,16 @@
 {
-  "name": "Automatic Power Profile on Battery Change",
-  "description": "Automatically switches between Battery Saver when on battery and Power when plugged in",
+  "name": "Power Profile Switcher",
+  "description": "Automatically applies your preferred power profile when the laptop is plugged in or unplugged, and remembers profiles you set by hand.",
   "uuid": "powerProfileSwitcher@jeremybasken.com",
   "shell-version": [
-    "49",
-    "48"
+    "48",
+    "49"
   ],
-  "settings-schema": "org.gnome.shell.extensions.powerProfileSwitcher"
+  "url": "https://github.com/jjbasken/PowerProfileSwitcher",
+  "settings-schema": "org.gnome.shell.extensions.powerProfileSwitcher",
+  "gettext-domain": "powerProfileSwitcher@jeremybasken.com",
+  "session-modes": [
+    "user",
+    "unlock-dialog"
+  ]
 }
