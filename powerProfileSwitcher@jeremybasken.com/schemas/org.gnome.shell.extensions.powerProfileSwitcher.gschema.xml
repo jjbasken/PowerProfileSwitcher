@@ -1,16 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <schemalist>
+  <enum id="org.gnome.shell.extensions.powerProfileSwitcher.profile">
+    <value nick="power-saver" value="0"/>
+    <value nick="balanced" value="1"/>
+    <value nick="performance" value="2"/>
+  </enum>
+
   <schema id="org.gnome.shell.extensions.powerProfileSwitcher"
           path="/org/gnome/shell/extensions/powerProfileSwitcher/">
-    <key name="ac-profile" type="s">
+    <key name="ac-profile" enum="org.gnome.shell.extensions.powerProfileSwitcher.profile">
       <default>'performance'</default>
       <summary>Profile when on AC power</summary>
-      <description>Power profile to use when plugged into AC power</description>
+      <description>
+        Power profile to use when plugged into AC power. If this machine does
+        not offer the profile, the closest available one is used instead.
+      </description>
     </key>
-    <key name="battery-profile" type="s">
+    <key name="battery-profile" enum="org.gnome.shell.extensions.powerProfileSwitcher.profile">
       <default>'power-saver'</default>
       <summary>Profile when on battery</summary>
-      <description>Power profile to use when running on battery</description>
+      <description>
+        Power profile to use when running on battery. If this machine does not
+        offer the profile, the closest available one is used instead.
+      </description>
+    </key>
+    <key name="ac-manual-profile" type="s">
+      <default>''</default>
+      <summary>Remembered manual profile for AC power</summary>
+      <description>
+        Profile the user last selected by hand while on AC power, or the empty
+        string if there is none. Takes precedence over ac-profile and is
+        cleared when ac-profile is changed.
+      </description>
+    </key>
+    <key name="battery-manual-profile" type="s">
+      <default>''</default>
+      <summary>Remembered manual profile for battery power</summary>
+      <description>
+        Profile the user last selected by hand while on battery, or the empty
+        string if there is none. Takes precedence over battery-profile and is
+        cleared when battery-profile is changed.
+      </description>
     </key>
   </schema>
 </schemalist>
